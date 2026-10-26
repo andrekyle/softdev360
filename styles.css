@@ -837,8 +837,13 @@ body { overflow-x:clip; }
   .sfpipe-track { min-width: 0; display: grid; gap: 12px; padding: 0; }
   .sfpipe-pipe { display: none; }
   .sfpipe-st, .sfpipe-st.up, .sfpipe-st.down { position: static; transform: none; width: auto; display: grid; grid-template-columns: 42px 1fr; align-items: center; gap: 12px; padding: 14px; border: 1px solid #e6eaf0; border-radius: 16px; background: #fff; }
-  .sfpipe-pn { grid-row: span 2; }
+  .sfpipe-pn { position: static; grid-row: span 2; margin: 0; transform: none !important; }
+  .sfpipe-tx, .sfpipe-st.up .sfpipe-tx, .sfpipe-st.down .sfpipe-tx { position: static; opacity: 1; transform: none !important; }
   .sfpipe-tx p { margin-bottom: 0; }
+
+  /* Keep complex desktop-only motion from creating clipped or overlapping cards. */
+  .moving-parts .mp-node, .sfba-node { animation: none !important; }
+  .sfba-gap, .fragment-lines, .connected-lines { animation: none !important; }
 }
 
 
