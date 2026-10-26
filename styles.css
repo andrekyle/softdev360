@@ -783,6 +783,64 @@ body { overflow-x:clip; }
   .pulse-dot, .bridge-spark { display: none; }
 }
 
+/* Mobile-first cleanup and responsive pass. */
+.line-art, .nodes, .paper-stack,
+.outcome-card::after,
+.about-product-copy::after,
+.thread { display: none !important; }
+
+.outcome-card:hover,
+.outcome-card.reveal.visible:hover { transform: none; box-shadow: 0 12px 30px rgba(15, 28, 45, .06); }
+
+@media (max-width: 700px) {
+  body { overflow-x: hidden; }
+  .topbar { position: sticky; top: 0; z-index: 20; height: 64px; padding: 0 18px; }
+  .brand-logo-image { width: 142px; height: auto; }
+  .nav-cta { padding: 11px 14px; font-size: 11px; }
+  .nav-cta span { display: none; }
+  .menu { width: 34px; height: 34px; }
+
+  .hero { padding: 54px 18px 0; text-align: left; }
+  .hero-content { width: 100%; }
+  .hero .eyebrow { font-size: 9px; letter-spacing: .11em; line-height: 1.5; }
+  .hero h1 { font-size: clamp(42px, 12vw, 62px); line-height: 1.02; letter-spacing: -.075em; margin: 18px 0 22px; }
+  .hero-heading-line { display: block; }
+  .hero-copy { max-width: 100%; margin: 0 0 25px; font-size: 16px; line-height: 1.55; }
+  .hero-actions { justify-content: flex-start; gap: 12px; }
+  .hero-actions .button { padding: 14px 18px; font-size: 13px; }
+  .hero-actions .text-link { font-size: 13px; }
+  .product-stage { margin: 34px -18px 0; border-radius: 22px 22px 0 0; }
+  .product-stage img { width: 130%; max-width: none; transform: translateX(-12%); }
+
+  .section, .sfpipe-section, .workflow, .cost-section { padding-left: 18px; padding-right: 18px; }
+  .display { font-size: clamp(34px, 10vw, 50px); line-height: 1.04; }
+  .lead { font-size: 16px; line-height: 1.55; }
+  .problem-grid, .outcome-grid, .audience-strip { grid-template-columns: 1fr; gap: 14px; }
+  .problem-card { min-height: 0; padding: 24px; border-radius: 20px; }
+  .problem-card h3 { font-size: 26px; margin-top: 22px; }
+  .problem-card p { font-size: 15px; line-height: 1.55; margin-bottom: 0; }
+
+  .workflow-shell { margin-top: 30px; border-radius: 18px; }
+  .workflow-tabs { display: flex; overflow-x: auto; scrollbar-width: none; }
+  .workflow-tabs::-webkit-scrollbar { display: none; }
+  .workflow-tabs button { flex: 0 0 116px; padding: 16px 10px; font-size: 12px; }
+  .workflow-tabs b { display: block; margin: 0 0 3px; }
+  .workflow-panel { grid-template-columns: 1fr; gap: 28px; padding: 26px 20px; min-height: 0; }
+  .stage-copy h3 { font-size: 34px; margin: 13px 0 15px; }
+  .stage-copy p, .stage-copy ul { font-size: 15px; }
+
+  .outcome-card { min-height: 0; padding: 22px; border-radius: 18px; }
+  .outcome-media { aspect-ratio: 16 / 9; }
+  .outcome-grid h3 { font-size: 22px; }
+  .outcome-grid p { font-size: 14px; line-height: 1.55; }
+  .sfpipe-scroll { overflow-x: visible; }
+  .sfpipe-track { min-width: 0; display: grid; gap: 12px; padding: 0; }
+  .sfpipe-pipe { display: none; }
+  .sfpipe-st, .sfpipe-st.up, .sfpipe-st.down { position: static; transform: none; width: auto; display: grid; grid-template-columns: 42px 1fr; align-items: center; gap: 12px; padding: 14px; border: 1px solid #e6eaf0; border-radius: 16px; background: #fff; }
+  .sfpipe-pn { grid-row: span 2; }
+  .sfpipe-tx p { margin-bottom: 0; }
+}
+
 
 /* Source-integrated "Too many moving parts" section: isolated from site-wide rules. */
 .moving-parts-wrap {max-width: 900px; margin: 46px auto 0; width: 100%;}
