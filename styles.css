@@ -833,30 +833,9 @@ body { overflow-x:clip; }
   .outcome-media { aspect-ratio: 16 / 9; }
   .outcome-grid h3 { font-size: 22px; }
   .outcome-grid p { font-size: 14px; line-height: 1.55; }
-  .sfpipe-scroll { overflow-x: visible; }
-  .sfpipe-track { min-width: 0; display: grid; gap: 12px; padding: 0; }
-  .sfpipe-pipe { display: none; }
-  .sfpipe-st, .sfpipe-st.up, .sfpipe-st.down { position: static; transform: none; width: auto; display: grid; grid-template-columns: 42px 1fr; align-items: center; gap: 12px; padding: 14px; border: 1px solid #e6eaf0; border-radius: 16px; background: #fff; }
-  .sfpipe-pn { position: static; grid-row: span 2; margin: 0; transform: none !important; }
-  .sfpipe-tx, .sfpipe-st.up .sfpipe-tx, .sfpipe-st.down .sfpipe-tx { position: static; opacity: 1; transform: none !important; }
-  .sfpipe-tx p { margin-bottom: 0; }
-
   /* Keep complex desktop-only motion from creating clipped or overlapping cards. */
   .moving-parts .mp-node, .sfba-node { animation: none !important; }
   .sfba-gap, .fragment-lines, .connected-lines { animation: none !important; }
-}
-
-/* Restore the original connected workflow animation on narrow screens. */
-@media (max-width: 700px) {
-  .sfpipe-scroll { overflow-x: auto; }
-  .sfpipe-track { min-width: 810px; display: block; padding: 8px 0 12px; }
-  .sfpipe-pipe { display: block; }
-  .sfpipe-st, .sfpipe-st.up, .sfpipe-st.down { position: absolute; display: block; padding: 0; border: 0; border-radius: 0; background: transparent; }
-  .sfpipe-pn { position: absolute; margin-left: -24px; transform: scale(1) !important; }
-  .sfpipe-tx, .sfpipe-st.up .sfpipe-tx, .sfpipe-st.down .sfpipe-tx { position: absolute; opacity: 1; }
-  .sfpipe-st.up .sfpipe-tx { bottom: calc(460px - var(--y) + 42px); transform: none !important; }
-  .sfpipe-st.down .sfpipe-tx { top: calc(var(--y) + 42px); transform: none !important; }
-  .sfpipe-mobile-hint { display: block; }
 }
 
 
