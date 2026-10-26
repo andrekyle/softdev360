@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">SoftDev360</title>
+  <defs>
+    <linearGradient id="ring" x1="8" y1="56" x2="56" y2="8" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6530ff"/>
+      <stop offset=".45" stop-color="#1458ff"/>
+      <stop offset="1" stop-color="#02d2e9"/>
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="28" fill="url(#ring)"/>
+  <circle cx="32" cy="32" r="22" fill="#fff"/>
+  <text x="32" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="800" fill="#0874e8">360</text>
+</svg>
