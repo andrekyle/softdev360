@@ -846,6 +846,19 @@ body { overflow-x:clip; }
   .sfba-gap, .fragment-lines, .connected-lines { animation: none !important; }
 }
 
+/* Restore the original connected workflow animation on narrow screens. */
+@media (max-width: 700px) {
+  .sfpipe-scroll { overflow-x: auto; }
+  .sfpipe-track { min-width: 810px; display: block; padding: 8px 0 12px; }
+  .sfpipe-pipe { display: block; }
+  .sfpipe-st, .sfpipe-st.up, .sfpipe-st.down { position: absolute; display: block; padding: 0; border: 0; border-radius: 0; background: transparent; }
+  .sfpipe-pn { position: absolute; margin-left: -24px; transform: scale(1) !important; }
+  .sfpipe-tx, .sfpipe-st.up .sfpipe-tx, .sfpipe-st.down .sfpipe-tx { position: absolute; opacity: 1; }
+  .sfpipe-st.up .sfpipe-tx { bottom: calc(460px - var(--y) + 42px); transform: none !important; }
+  .sfpipe-st.down .sfpipe-tx { top: calc(var(--y) + 42px); transform: none !important; }
+  .sfpipe-mobile-hint { display: block; }
+}
+
 
 /* Source-integrated "Too many moving parts" section: isolated from site-wide rules. */
 .moving-parts-wrap {max-width: 900px; margin: 46px auto 0; width: 100%;}
